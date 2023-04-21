@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block extracss%}
+
+<!--home.html css-->
+<link rel="stylesheet" href="{%static 'css/categoryspecific.css' %}" type="text/css">
+<link rel="stylesheet" href="{%static 'css/home.css' %}" type="text/css">
+
+
+{% endblock %}
+
+{% block container %}
+
+<div class="row">
+    <img class="col-sm-12 herosection p-0" src="/static{{details.category_herosection_image.url}}" alt="">
+</div>
+
+<h5 class="h5-header col-lg-12 mt-5">PRODUCTS</h5>
+<h2 class="h2-header col-lg-12 mb-2">{{details.category_name}}</h2>
+
+<div class="row col-lg-12 justify-content-center">
+    {% for product in products %}
+    <div class="shadow col-lg-3 card my-3 mx-4" style="width: 15rem;">
+        <img class="card-img-top" src="/static{{product.product_card_image.url}}" alt="Card image cap">
+        <div class="card-body text-center">
+            <a href="{% url 'product_details' product_name=product.product_name %}">
+                <h5 class="card-title">{{product.product_name}}</h5>
+            </a>
+            <p class="card-text text-left">{{product.product_summary}}</p>
+            <a href="{% url 'product_details' product_name=product.product_name %}" class="btn btn-primary mt-2">Read
+                Details</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

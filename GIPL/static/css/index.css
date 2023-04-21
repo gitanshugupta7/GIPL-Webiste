@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Marsek";
+  src: url("../fonts/Marsek-Demi.ttf");
+}
+body::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.274);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(65, 65, 65, 0.377);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.274);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(65, 65, 65, 0.377);
+}
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 !important;
+  margin: auto !important;
+}
+
+nav {
+  max-width: 1440px !important;
+}
+
+.top-nav {
+  background-color: #1060D1;
+  padding: 0.4rem;
+}
+.top-nav .nav-link {
+  font-size: 0.7rem;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92) !important;
+  padding: 0;
+}
+.top-nav .loc:hover {
+  color: rgba(255, 255, 255, 0.77) !important;
+}
+
+.below-nav {
+  background-color: white;
+}
+.below-nav .nav-link {
+  font-size: 1rem;
+  font-family: "Roboto";
+  color: rgba(42, 49, 50, 0.92) !important;
+}
+.below-nav .nav-link:hover {
+  color: rgba(42, 49, 50, 0.67) !important;
+}
+.below-nav .h6,
+.below-nav .h5 {
+  margin-bottom: 0 !important;
+}
+.below-nav .navbar-brand {
+  font-family: "Marsek";
+}
+
+.footer {
+  background-color: #1060D1;
+  padding-top: 3rem !important;
+}
+.footer h1 {
+  color: rgba(255, 255, 255, 0.97);
+  font-family: "Marsek";
+}
+.footer h4 {
+  color: rgba(255, 255, 255, 0.97);
+  font-weight: bolder;
+}
+.footer h6 {
+  color: rgba(255, 255, 255, 0.97);
+}
+.footer p {
+  color: rgba(255, 255, 255, 0.87);
+}

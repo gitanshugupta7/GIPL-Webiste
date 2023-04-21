@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block extracss%}
+
+<!--home.html css-->
+<link rel="stylesheet" href="{%static 'css/productdetails.css' %}" type="text/css">
+<link rel="stylesheet" href="{%static 'css/home.css' %}" type="text/css">
+
+
+{% endblock %}
+
+{% block container %}
+
+<div class="row">
+    <img class="col-sm-12 herosection p-0" src="/static{{details.product_herosection_image.url}}" alt="">
+
+    <div class="col-sm-8">
+        {{details.product_info_body|safe}}
+    </div>
+
+</div>
+
+
+
+{% endblock %}

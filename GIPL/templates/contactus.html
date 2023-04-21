@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block extracss%}
+
+<!--home.html css-->
+<link rel="stylesheet" href="{%static 'css/contactus.css' %}" type="text/css">
+<link rel="stylesheet" href="{%static 'css/home.css' %}" type="text/css">
+
+
+{% endblock %}
+
+{% block container %}
+
+<div class="row">
+    <img class="col-sm-12 herosection p-0" src="{%static 'images/herosection.webp' %}" alt="">
+</div>
+
+
+<div class="row">
+    <div class="card col-lg-4 mt-5 mb-5">
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                {{form.full_name}}
+            </div>
+            <div>
+                {{form.email}}
+            </div>
+            <div>
+                {{form.phoneNumber}}
+            </div>
+            <div>
+                {{form.message}}
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-8"></div>
+
+
+</div>
+
+{% endblock %}

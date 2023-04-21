@@ -1,0 +1,135 @@
+$blue-font-color: #1060D1;
+$black-font-color: #293133;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   font-family: 'Roboto';
+   color: $black-font-color;
+   opacity: 0.87;
+   letter-spacing: 0.009rem;
+}
+
+
+.herosection {
+   width: 100%;
+   height: 80vh !important;
+   object-fit: cover;
+}
+
+.card {
+   padding: 0 !important;
+   border-radius: 0 !important;
+
+   .card-title {
+      font-family: 'Roboto';
+      font-weight: bolder;
+      color: $blue-font-color;
+   }
+
+   .card-text {
+      font-family: 'Roboto';
+      font-weight: 400;
+      color: $black-font-color;
+      min-height: 4rem;
+   }
+}
+
+.h5-header {
+   text-align: center;
+}
+
+.h2-header {
+   text-align: center;
+   color: $blue-font-color;
+   font-weight: bolder;
+   letter-spacing: 0.005rem;
+}
+
+
+.shipimage {
+   width: 100%;
+   object-fit: cover;
+}
+
+
+.productsection {
+
+   .category-h3 {
+      color: $blue-font-color;
+      font-weight: bolder;
+   }
+
+   .scrollable {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      float: left;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+
+      .card {
+         flex: 0 0 auto;
+      }
+   }
+
+   .scrollable-1 {
+      width: 1300px;
+      overflow-x: auto;
+   }
+
+}
+
+.getintouch {
+   background-color: $blue-font-color;
+
+   h2,
+   p {
+      color: rgba($color: #ffffff, $alpha: 0.92);
+   }
+
+   #id_email {
+      margin-left: 2.4rem;
+      padding: 1rem 1rem;
+      border-radius: 40px;
+      outline: none;
+      border: none;
+      width: 25rem;
+   }
+
+   .submit {
+      border-radius: 40px;
+      height: 3.5rem;
+      outline: none;
+      border: none;
+      width: 7rem;
+
+      :hover {
+         filter: brightness(85%);
+      }
+   }
+}
+
+
+
+@media screen and (max-width: 720px) {
+   .herosection {
+      height: 100vh !important;
+      object-fit: cover;
+   }
+
+   .shipimage {
+      height: 40vh !important;
+      object-fit: cover;
+   }
+
+   .getintouch {
+      .field {
+         width: 19rem;
+      }
+   }
+}

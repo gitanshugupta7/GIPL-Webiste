@@ -1,0 +1,147 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block extracss%}
+
+<!--home.html css-->
+<link rel="stylesheet" href="{%static 'css/home.css' %}" type="text/css">
+
+{% endblock %}
+
+{% block container %}
+
+<div class="row">
+  <img class="col-sm-12 herosection p-0" src="{%static 'images/herosection.webp' %}" alt="">
+</div>
+
+<div class="introsection row justify-content-center">
+  <h5 class="h5-header col-lg-12 mt-5">WELCOME TO</h5>
+  <h2 class="h2-header col-lg-12 mb-4">GITANSHU IMPEX PRIVATE LIMITED</h2>
+  <p class="col-lg-8 col-11 mb-5" style="text-align: center;">We, Gitanshu Impex Private Limited, are Merchant Exporters
+    based at Kolkata, India . We do sourcing of multiple products for Exports directly from manufacturers spread in
+    breadth and length of various cities around India.
+    We begun our export business with sourcing of Carpenter tools. Gradually we gained trust of our overseas customers.
+    Not only we got rewarded with multiple orders of regular items, we were given the opportunity to source various
+    products of diverse line alongside.</p>
+</div>
+
+<div class="row justify-content-center">
+  <div class="row col-lg-10 d-flex justify-content-center">
+
+    <div class="shadow col-lg-3 card mx-3 my-4 my-lg-0" style="width: 18rem;">
+      <img class="card-img-top" src="{%static 'images/cordialrelationship.webp'%}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">CORDIAL <br>
+          RELATIONSHIP</h5>
+        <p class="card-text">We have close and cordial relationship with manufacturers. We keep close watch on movement
+          of various input prices for competitiveness.</p>
+      </div>
+    </div>
+
+    <div class="shadow col-lg-3 card mx-3 my-4 my-lg-0" style="width: 18rem;">
+      <img class="card-img-top" src="{%static 'images/strictinspection.webp'%}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">STRICT <br>
+          INSPECTION</h5>
+        <p class="card-text">We have an inspection team to ensure strict compliance of buyers specifications in regard
+          to quality of product, packing, marking and dispatch</p>
+      </div>
+    </div>
+
+    <div class="shadow col-lg-3 card mx-3 my-4 my-lg-0" style="width: 18rem;">
+      <img class="card-img-top" src="{%static 'images/isocertified.webp'%}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">ISO <br>
+          CERTIFIED</h5>
+        <p class="card-text">We are ISO 9001:2015 certified merchant exporter delivering quality products matching ISO
+          standards. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-lg-12">
+    <img class="shipimage mt-5" src="{%static 'images/ship.webp' %}">
+  </div>
+</div>
+
+<div class="productsection row d-flex justify-content-center">
+  <h5 class="h5-header col-lg-12 mt-5">OUR</h5>
+  <h2 class="h2-header col-lg-12 mb-4">CATEGORIES OF PRODUCTS</h2>
+
+  <div class="scrollable row col-lg-10">
+
+    {% for category in categories %}
+    <div class="shadow col-lg-3 card mx-3 my-4 my-lg-0" style="width: 15rem;">
+      <img class="card-img-top" src="/static{{category.category_card_image.url}}" alt="Card image cap">
+      <div class="card-body text-center">
+        <h6 class="card-title">{{category.category_name}}</h6>
+        <p class="card-text text-left">{{category.category_summary}}</p>
+        <a href="{% url 'category_specific' category_name=category.category_name %}" class="btn btn-primary mt-2">Know
+          More</a>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+<div class="mt-5"></div>
+
+<div class="getintouch row">
+  <div class="row col-lg-6">
+    <h2 class="pt-lg-5 pl-lg-5 pt-5 px-4">Get In Touch</h2>
+    <p class="pt-lg-2 pl-lg-5 pr-lg-5 pt-3 px-4">We at GIPL help manufacturers from various part of India to deliver
+      their finished products to different countries at the best cost. Our team of merchant exporter give our best to
+      provide insights on demands and maintain constant supply. Our clients are always impressed by our diligent
+      paperwork and best in class service.</p>
+    <form method="POST">
+      {% csrf_token %}
+      <!--<input class="field mt-3 ml-lg-5 ml-4 mb-5 px-lg-4 py-lg-3 px-2 py-2" type="email" placeholder="Enter your email"
+        value="{{form.email}}">-->
+      {{form}}
+      <button class="submit mt-4 ml-2" type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="row col-lg-6 d-flex justify-content-center">
+    <iframe class="p-lg-5 p-3 mb-lg-0 mb-5"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.803686954993!2d88.32140031427254!3d22.5115475408836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027a00a31ecbc7%3A0x39a83e6b5388e77f!2sSiddhamani%20Apts%2C!5e0!3m2!1sen!2sin!4v1664121542110!5m2!1sen!2sin"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+<div class="productsection row justify-content-center">
+  <h5 class="h5-header col-lg-12 mt-5">OUR</h5>
+  <h2 class="h2-header col-lg-12 mb-2">PRODUCTS</h2>
+
+  {% for category, pd in products.items %}
+  <div class="col-12 h4 mb-3 mt-3 mb-1 mt-lg-5 mb-lg-4">
+    <h3 class="category-h3 pl-5">{{category}}</h3>
+  </div>
+  <div class="scrollable row col-lg-11">
+    {% for product in pd %}
+    <div class="shadow col-lg-3 card mx-3 my-4 my-lg-0" style="width: 15rem;">
+      <img class="card-img-top" src="/static{{product.product_card_image.url}}" alt="Card image cap">
+      <div class="card-body text-center">
+        <a href="{% url 'product_details' product_name=product.product_name %}">
+          <h6 class="card-title">{{product.product_name}}</h6>
+        </a>
+        <p class="card-text text-left">{{product.product_summary}}</p>
+        <a href="{% url 'product_details' product_name=product.product_name %}" class="btn btn-primary mt-2">Read
+          Details</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
+</div>
+<!-- 
+<div class="productsection row justify-content-center">
+  <h5 class="h5-header col-lg-12 mt-5">MEET</h5>
+  <h2 class="h2-header col-lg-12 mb-4">OUR PARTNERS</h2>
+</div> -->
+
+<div class="mb-5"></div>
+{% endblock %}

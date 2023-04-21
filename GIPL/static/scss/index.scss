@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: 'Marsek';
+  src: url('../fonts/Marsek-Demi.ttf');
+}
+
+$font-color: #2A3132;
+$blue-font-color: #1060D1;
+$white-font-color: rgba($color: #ffffff, $alpha: 0.97);
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 10px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.274);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(65, 65, 65, 0.377);
+  }
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.274);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(65, 65, 65, 0.377);
+  }
+}
+
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 !important;
+  margin: auto !important;
+}
+
+nav {
+  max-width: 1440px !important;
+}
+
+.top-nav {
+  background-color: #1060D1;
+  padding: 0.4rem;
+
+  .nav-link {
+    font-size: 0.7rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: rgba($color: #ffffff, $alpha: 0.92) !important;
+    padding: 0;
+  }
+
+  .loc {
+    &:hover {
+      color: rgba($color: #ffffff, $alpha: 0.77) !important;
+    }
+  }
+}
+
+.below-nav {
+  background-color: white;
+
+  .nav-link {
+    font-size: 1rem;
+    font-family: 'Roboto';
+    color: rgba($color: $font-color, $alpha: 0.92) !important;
+
+    &:hover {
+      color: rgba($color: $font-color, $alpha: 0.67) !important;
+    }
+  }
+
+  .h6,
+  .h5 {
+    margin-bottom: 0 !important;
+  }
+
+  .navbar-brand {
+    font-family: 'Marsek';
+  }
+
+}
+
+
+.footer {
+  background-color: $blue-font-color;
+
+  h1 {
+    color: $white-font-color;
+    font-family: 'Marsek';
+  }
+
+  h4 {
+    color: $white-font-color;
+    font-weight: bolder;
+  }
+
+  h6 {
+    color: rgba($color: #ffffff, $alpha: 0.97);
+  }
+
+  p {
+    color: rgba($color: #ffffff, $alpha: 0.87);
+  }
+
+  padding-top: 3rem !important;
+
+}

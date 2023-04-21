@@ -1,0 +1,165 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{%static 'images/favicon.svg' %}" type="image/x-icon">
+  <link rel="icon" href="{%static 'images/favicon.svg' %}" type="image/x-icon">
+
+  <!--Meta Tags-->
+  <meta name="title" content="Gitanshu Impex Private Limited is a merchant exporter based in India">
+  <meta name="description"
+    content="We, Gitanshu Impex Private Limited, are Merchant Exporters. We do sourcing of multiple products for Exports directly from manufacturers spread in  various cities around India.">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="5 days">
+  <meta name="author" content="Gitanshu Gupta">
+
+  <!--Script for Icons-->
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!--The CSS for other templates-->
+  {% block extracss %}
+
+  {% endblock %}
+
+  <!--index.html css-->
+  <link rel="stylesheet" href="{%static 'css/index.css' %}" type="text/css">
+
+  <title>Gitanshu Impex Pvt. Ltd.</title>
+</head>
+
+<body class="container">
+
+  <div class="row fixed-top mt-lg-4">
+    <nav class="top-nav col-md-9 mx-auto navbar navbar-expand-lg navbar-light d-none d-md-block">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <span class="nav-link mx-2"><iconify-icon class="mr-1" icon="fluent:call-20-filled"></iconify-icon> +91
+              8697855877</span>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link mx-2"><iconify-icon class="mr-1" icon="bi:clock-fill"></iconify-icon> Mon - Sat :
+              10:00 - 18:00</span>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="loc nav-link" href="https://goo.gl/maps/tvk5y4Lj2j23QJMg6"><iconify-icon class="mr-1"
+                icon="fa6-solid:location-pin"></iconify-icon> Taratala, Kolkata, India</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="shadow below-nav col-md-9 mx-auto navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand h5 ml-3" href="{% url 'home' %}">GIPL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link h6 mx-3" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h6 mx-3" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h6 mx-3" href="{% url 'product_page' %}">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h6 mx-3" href="#">Process</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h6 mx-3" href="{% url 'contact_us' %}">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h5 mx-3 mx-md-1" href="https://wa.me/+918335969429"><iconify-icon
+                icon="dashicons:whatsapp"></iconify-icon></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h5 mx-3 mx-md-1" href="mailto: gitanshuimpex@gmail.com"><iconify-icon
+                icon="entypo:mail"></iconify-icon></iconify-icon></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  {% block container %}
+
+  {% endblock %}
+
+  <div class="footer mt-auto">
+    <div class="row position-sticky">
+      <div class="d-flex align-items-center col-md-2 justify-content-center pt-4 pb-4 pt-md-2">
+        <h1>GIPL</h1>
+      </div>
+
+      <div class="col-md-4 pt-4 pb-4 pt-md-0">
+        <h4>VISION</h4>
+        <p class="pt-2">We at GIPL help manufacturers from various part of India to deliver their finished products to
+          different
+          countries at the best cost. Our team of merchant exporter give our best to provide insights on demands and
+          maintain constant supply. Our clients are always impressed by our diligent paperwork and best in class
+          service.
+        </p>
+      </div>
+
+      <div class="col-md-3 pt-4 pb-4 pt-md-0">
+        <h4>CONTACT</h4>
+        <h6 class="pt-2"><iconify-icon icon="ic:baseline-call"></iconify-icon> +91 8697855877</h6>
+        <h6 class="pt-2"><iconify-icon icon="tabler:brand-whatsapp"></iconify-icon> +91 8697855877</h6>
+        <h6 class="pt-2"><iconify-icon icon="ic:round-mail"></iconify-icon> gitanshugupta7@gmail.com</h6>
+        <h6 class="pt-2"><iconify-icon icon="ic:baseline-location-on"></iconify-icon> Kolkata, India</h6>
+      </div>
+
+      <div class="col-md-3 pt-4 pb-4 pt-md-0">
+        <h4>QUICK LINKS</h4>
+        <a class="d-block pt-2" href="{% url 'home' %}">
+          <h6>Home</h6>
+        </a>
+        <a class="d-block pt-2" href="{% url 'product_page' %}">
+          <h6>Products</h6>
+        </a><a class="d-block pt-2" href="{% url 'contact_us' %}">
+          <h6>Contact Us</h6>
+        </a><a class="d-block pt-2" href="#">
+          <h6>About Us</h6>
+        </a>
+        <a class="d-block pt-2" href="#">
+          <h6>Process</h6>
+        </a>
+      </div>
+
+    </div>
+    <div class="row justify-content-center">
+      <h6 style="color: #F2CB05;">Copyright @GIPL 2023</h6>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
